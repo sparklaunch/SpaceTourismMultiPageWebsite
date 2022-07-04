@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SpaceTourismMultiPageWebsiteApp: App {
+    @StateObject private var globalState = GlobalState()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(globalState)
         }
     }
 }

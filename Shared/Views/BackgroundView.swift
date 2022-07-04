@@ -8,16 +8,27 @@
 import SwiftUI
 
 struct BackgroundView: View {
+    @Binding var currentTabPage: TabViewPage
+    private var backgroundImage: Image {
+        switch currentTabPage {
+        case .welcomePage:
+            return Image(decorative: "HomeBackground")
+        case .destinationPage:
+            return Image(decorative: "DestinationBackground")
+        }
+    }
     var body: some View {
-        Image(decorative: "HomeBackground")
+        backgroundImage
             .resizable()
             .edgesIgnoringSafeArea(.all)
+            .transition(.opacity)
     }
 }
 
+
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        BackgroundView()
+        BackgroundView(currentTabPage: .constant(.welcomePage))
             .previewLayout(.sizeThatFits)
     }
 }

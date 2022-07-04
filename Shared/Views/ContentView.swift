@@ -9,22 +9,21 @@ import SwiftUI
 
 enum TabViewPage {
     case welcomePage
+    case destinationPage
 }
 
 struct ContentView: View {
-    @State private var currentTabPage: TabViewPage = .welcomePage
+    @EnvironmentObject private var globalState: GlobalState
     var body: some View {
         ZStack(alignment: .top) {
-            BackgroundView()
+            BackgroundView(currentTabPage: $globalState.currentPageView)
             VStack(spacing: 48) {
                 TopNavigationView()
-                TabView(selection: $currentTabPage) {
-                    VStack(spacing: .zero) {
-                        TitleView()
-                        Spacer()
-                        ExploreButtonView()
-                    }
-                    .tag(TabViewPage.welcomePage)
+                TabView(selection: $globalState.currentPageView) {
+                    WelcomeView()
+                        .tag(TabViewPage.welcomePage)
+                    DestinationView()
+                        .tag(TabViewPage.destinationPage)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
             }
@@ -36,5 +35,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(GlobalState())
     }
 }
