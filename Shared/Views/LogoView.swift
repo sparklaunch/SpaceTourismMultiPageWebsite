@@ -1,5 +1,5 @@
 //
-//  BackgroundView.swift
+//  LogoView.swift
 //  Space Tourism Multi Page Website (iOS)
 //
 //  Created by Jinwook Kim on 2022/07/04.
@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct BackgroundView: View {
+struct LogoView: View {
     var body: some View {
-        Image(decorative: "HomeBackground")
+        Image("Logo")
             .resizable()
-            .edgesIgnoringSafeArea(.all)
+            .frame(width: 36, height: 36)
     }
 }
 
-struct BackgroundView_Previews: PreviewProvider {
+struct LogoView_Previews: PreviewProvider {
     static var previews: some View {
-        BackgroundView()
+        LogoView()
             .previewLayout(.sizeThatFits)
     }
 }
