@@ -7,15 +7,26 @@
 
 import SwiftUI
 
+enum TabViewPage {
+    case welcomePage
+}
+
 struct ContentView: View {
+    @State private var currentTabPage: TabViewPage = .welcomePage
     var body: some View {
         ZStack(alignment: .top) {
             BackgroundView()
             VStack(spacing: 48) {
                 TopNavigationView()
-                TitleView()
-                Spacer()
-                ExploreButtonView()
+                TabView(selection: $currentTabPage) {
+                    VStack(spacing: .zero) {
+                        TitleView()
+                        Spacer()
+                        ExploreButtonView()
+                    }
+                    .tag(TabViewPage.welcomePage)
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
             }
             .padding(24)
         }
