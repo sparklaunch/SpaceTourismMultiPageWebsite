@@ -14,6 +14,8 @@ struct ContentView: View {
             VStack(spacing: 48) {
                 TopNavigationView()
                 TitleView()
+                Spacer()
+                ExploreButtonView()
             }
             .padding(24)
         }

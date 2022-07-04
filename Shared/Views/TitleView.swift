@@ -11,10 +11,11 @@ struct TitleView: View {
     var body: some View {
         VStack(spacing: 16) {
             Text("SO, YOU WANT TO TRAVEL TO")
-                .fontWeight(.light)
+                .font(.title.weight(.light))
                 .foregroundColor(Color("TextColor"))
             Text("SPACE")
-                .font(.system(size: 96))
+                .font(.system(size: 96, design: .serif))
+                .kerning(5)
                 .foregroundColor(.white)
             Text("Let's face it; it you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!")
                 .fontWeight(.light)
