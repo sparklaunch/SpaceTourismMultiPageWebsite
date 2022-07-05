@@ -15,6 +15,7 @@ struct DestinationHeaderView: View {
                 .foregroundColor(Color("TitleColor"))
             Text("PICK YOUR DESTINATION")
                 .fontWeight(.semibold)
+                .kerning(3)
                 .foregroundColor(.white)
         }
     }

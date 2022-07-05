@@ -27,6 +27,15 @@ struct Destination: Identifiable {
     let travelTime: TimeUnit
 }
 
+extension Destination {
+    init() {
+        self.name = "MOON"
+        self.description = "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites."
+        self.distance = .kilometer(384_000)
+        self.travelTime = .day(3)
+    }
+}
+
 class DestinationStorage: ObservableObject {
     @Published var destinations: [Destination] = [
         .init(name: "MOON", description: "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.", distance: .kilometer(384_000), travelTime: .day(3)),

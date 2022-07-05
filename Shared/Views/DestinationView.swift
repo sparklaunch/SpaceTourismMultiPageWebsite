@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct DestinationView: View {
+    @EnvironmentObject private var destinationStorage: DestinationStorage
     var body: some View {
-        VStack {
+        VStack(spacing: 24) {
             DestinationHeaderView()
+            TabView {
+                ForEach(destinationStorage.destinations) { destination in
+                    DestinationItemView(destination: destination)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
         }
     }
 }
@@ -20,5 +27,6 @@ struct DestinationView_Previews: PreviewProvider {
         DestinationView()
             .background(Color("BackgroundColor"))
             .previewLayout(.sizeThatFits)
+            .environmentObject(DestinationStorage())
     }
 }
