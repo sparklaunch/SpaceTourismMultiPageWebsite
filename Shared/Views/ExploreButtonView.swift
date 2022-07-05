@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ExploreButtonView: View {
+    @EnvironmentObject private var globalState: GlobalState
     var body: some View {
         Button {
-            // TODO: EXPLORE BUTTON.
+            withAnimation {
+                globalState.currentPageView = .destinationPage
+            }
         } label: {
             ZStack {
                 Circle()
@@ -30,5 +33,6 @@ struct ExploreButtonView_Previews: PreviewProvider {
             .padding()
             .background(Color("BackgroundColor"))
             .previewLayout(.sizeThatFits)
+            .environmentObject(GlobalState())
     }
 }

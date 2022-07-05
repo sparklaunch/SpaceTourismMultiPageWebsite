@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9016B668287416390066F0B5 /* DestinationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016B667287416390066F0B5 /* DestinationStorage.swift */; };
 		9021EA23287123BD000E3132 /* SpaceTourismMultiPageWebsiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021EA13287123BC000E3132 /* SpaceTourismMultiPageWebsiteApp.swift */; };
 		9021EA24287123BD000E3132 /* SpaceTourismMultiPageWebsiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021EA13287123BC000E3132 /* SpaceTourismMultiPageWebsiteApp.swift */; };
 		9021EA25287123BD000E3132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021EA14287123BC000E3132 /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9016B667287416390066F0B5 /* DestinationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationStorage.swift; sourceTree = "<group>"; };
 		9021EA13287123BC000E3132 /* SpaceTourismMultiPageWebsiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTourismMultiPageWebsiteApp.swift; sourceTree = "<group>"; };
 		9021EA14287123BC000E3132 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9021EA15287123BD000E3132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				9021EA442872B803000E3132 /* GlobalStates.swift */,
+				9016B667287416390066F0B5 /* DestinationStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				9021EA352872AB4D000E3132 /* BackgroundView.swift in Sources */,
 				9021EA432872B2AD000E3132 /* DestinationView.swift in Sources */,
 				9021EA25287123BD000E3132 /* ContentView.swift in Sources */,
+				9016B668287416390066F0B5 /* DestinationStorage.swift in Sources */,
 				9021EA23287123BD000E3132 /* SpaceTourismMultiPageWebsiteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
