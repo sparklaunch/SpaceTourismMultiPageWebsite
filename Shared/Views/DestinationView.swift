@@ -9,12 +9,16 @@ import SwiftUI
 
 struct DestinationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            DestinationHeaderView()
+        }
     }
 }
 
 struct DestinationView_Previews: PreviewProvider {
     static var previews: some View {
         DestinationView()
+            .background(Color("BackgroundColor"))
+            .previewLayout(.sizeThatFits)
     }
 }
